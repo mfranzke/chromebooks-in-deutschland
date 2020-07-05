@@ -104,6 +104,7 @@ function getIcon(iconName) {
 function screenResToText(res) {
     switch (res) {
         case "1366x768": return "HD" ;
+        case "1366x912": return "HD 3:2" ;
         case "1920x1080": return "FHD" ;
         case "1920x1200": return "FHD 16:10" ;
         case "2256x1504": return "2K 3:2" ;
@@ -150,7 +151,7 @@ function getProductLink(entry) {
     let id = entry.productId;
     let url = "";
     switch (provider) {
-      case "idealo": url = "http://idealo.de/preisvergleich/OffersOfProduct/" + id; break;
+      case "idealo": url = "https://idealo.de/preisvergleich/OffersOfProduct/" + id; break;
       case "geizhals": url = "https://geizhals.de/-a" + id + ".html"; break;
       case "metacomp": url = "https://shop.metacomp.de/Shop-DE/Produkt-1_" + id; break;
       default: url = "";
